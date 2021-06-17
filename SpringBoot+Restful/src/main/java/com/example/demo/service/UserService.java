@@ -1,6 +1,9 @@
 package com.example.demo.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.demo.bean.User;
+import com.example.demo.bean.UserDomain;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -9,7 +12,8 @@ import java.util.List;
  * @author: dxz
  * @date: 2021/6/3 15:25
  */
-public interface UserService {
+@Service
+public interface UserService extends IService<UserDomain> {
 
     /**
      * 新增用户
