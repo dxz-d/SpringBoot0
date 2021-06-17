@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.bean.User;
 import com.example.demo.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/api/user")
+@Api(tags = "RestFul接口", hidden = true)
 public class UserRestController {
     @Autowired
     private UserService userService;

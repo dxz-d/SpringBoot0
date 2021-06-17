@@ -22,6 +22,8 @@ public interface UserService extends IService<UserDomain> {
      */
     boolean addUser(User user);
 
+
+
     /**
      * 修改用户
      * @param user

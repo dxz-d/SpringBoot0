@@ -10,6 +10,7 @@ import com.example.demo.until.ExcelExportUtils;
 import com.example.demo.until.ExcelImportUtils;
 import com.example.demo.vo.PersonExportVo;
 import com.example.demo.vo.UserVo;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,6 +28,7 @@ import java.util.List;
  */
 @Controller
 @Slf4j
+@Api(tags = "easypoi接口", hidden = true)
 public class EasyPoiController {
 
     @Autowired

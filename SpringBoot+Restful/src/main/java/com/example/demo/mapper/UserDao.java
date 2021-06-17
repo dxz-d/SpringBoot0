@@ -1,6 +1,7 @@
-package com.example.demo.dao;
+package com.example.demo.mapper;
 
 import com.example.demo.bean.User;
+import com.example.demo.bean.UserDomain;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
