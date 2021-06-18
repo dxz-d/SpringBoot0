@@ -22,7 +22,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDomain> impleme
     @Autowired
     private UserDao userDao;
 
-
     @Override
     public boolean addUser(User user) {
         boolean flag=false;
@@ -68,5 +67,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDomain> impleme
     @Override
     public List<User> findAll() {
         return userDao.findAll();
+    }
+
+    @Override
+    public User getUserByNameAndAge(String name, int age) {
+        return userDao.getUserByNameAndAge(name, age);
     }
 }

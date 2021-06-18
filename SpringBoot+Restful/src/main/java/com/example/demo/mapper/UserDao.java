@@ -47,4 +47,9 @@ public interface UserDao {
     @Select("SELECT id,name,age FROM t_user")
     List<User> findAll();
 
+    /**
+     * 根据用户名和年龄获取用户
+     */
+    @Select("SELECT id,name,age FROM t_user where name=#{name} and age=#{age}")
+    User getUserByNameAndAge(String name, int age);
 }

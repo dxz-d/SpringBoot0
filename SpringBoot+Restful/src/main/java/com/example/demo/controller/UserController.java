@@ -37,24 +37,18 @@ public class UserController {
         return ResultUtil.define(200, "添加用户成功", user);
     }
 
-
-
-
-    /**
-     * 根据用户名和年龄获取用户
-     *
-     * @param name
-     * @param age
-     * @return
-     */
     @ApiOperation("根据用户名和年龄获取用户")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "name", value = "名字", dataType = "String", paramType = "query", required = true),
-            @ApiImplicitParam(name = "age", value = "年龄", dataType = "Integer", paramType = "query", required = true)
+            @ApiImplicitParam(name = "age", value = "年龄", dataType = "int", paramType = "query", required = true)
     })
     @GetMapping("/getUserByNameAndAge")
-    public Result getUserByNameAndAge(@RequestParam String name, @RequestParam Integer age) {
+    public Result getUserByNameAndAge(@RequestParam String name, @RequestParam int age) {
         log.info("name:{}, age:{}", name, age);
-        return ResultUtil.define(200, "添加用户成功", new User());
+        User userByNameAndAge = userService.getUserByNameAndAge(name, age);
+        if (userByNameAndAge == null) {
+            return ResultUtil.define(500, "查询用户失败", userByNameAndAge);
+        }
+        return ResultUtil.define(200, "查询用户成功", userByNameAndAge);
     }
 }

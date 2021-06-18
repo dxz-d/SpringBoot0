@@ -52,4 +52,11 @@ public interface UserService extends IService<UserDomain> {
      */
     List<User> findAll();
 
+    /**
+     * 根据用户名和年龄获取用户
+     * @param name
+     * @param age
+     * @return
+     */
+    User getUserByNameAndAge(String name, int age);
 }
