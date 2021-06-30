@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringBoot+File" />
+        <module name="SpringBoot" />
+        <module name="demo (2) (com.example)" />
+        <module name="demo (1) (com.nginx)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo (1) (com.nginx)" target="1.8" />
+      <module name="demo (2) (com.example)" target="1.8" />
+      <module name="SpringBoot" target="1.8" />
+      <module name="SpringBoot+File" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringBoot" options="-parameters" />
+      <module name="SpringBoot+File" options="-parameters" />
+      <module name="demo (1) (com.nginx)" options="-parameters" />
+      <module name="demo (2) (com.example)" options="-parameters" />
+    </option>
+  </component>
+</project>

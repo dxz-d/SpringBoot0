@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="demo (1) (com.nginx):war">
+    <output-path>$PROJECT_DIR$/SpringBoot+Nginx+Tomcat/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>demo (1) (com.nginx)</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SpringBoot+Nginx+Tomcat.war">
+      <element id="artifact" artifact-name="demo (1) (com.nginx):war exploded" />
+    </root>
+  </artifact>
+</component>
