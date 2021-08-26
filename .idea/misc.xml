@@ -11,8 +11,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot+Restful/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringBoot+Nginx+Tomcat/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringBoot+File/pom.xml" />
       </list>
     </option>
   </component>
