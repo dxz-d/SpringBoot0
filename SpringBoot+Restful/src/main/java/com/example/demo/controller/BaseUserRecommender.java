@@ -1,11 +1,14 @@
+/*
 package com.example.demo.controller;
 
+*/
 /**
  * @description: https://www.cnblogs.com/ahu-lichang/p/7073836.html
  * 这是一个java关于机器学习的工具库
  * @author: dxz
  * @date: 2021/8/16 16:00
- */
+ *//*
+
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
 import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
@@ -41,3 +44,4 @@ public class BaseUserRecommender {
         }
     }
 }
+*/

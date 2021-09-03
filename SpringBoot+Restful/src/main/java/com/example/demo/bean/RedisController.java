@@ -2,15 +2,13 @@ package com.example.demo.bean;
 
 
 import com.example.demo.service.UserService;
-import com.example.demo.until.RedisUtil;
+import com.example.demo.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.Map;
 
 /**
  * @description:

@@ -7,6 +7,10 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+    initialSize: 1
+    maxActive: 20
+    minIdle: 1
+    type: com.alibaba.druid.pool.DruidDataSource
 
   main:
     allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
@@ -18,6 +22,7 @@ spring:
     # Redis服务器连接端口
     redis:
     port: 6379
+    timeout: 0
     # Redis服务器连接密码（默认为空）
     password:
     #连接池最大连接数（使用负值表示没有限制）
@@ -32,6 +37,9 @@ spring:
       # 连接超时时间（毫秒）
       timeout: 300
 
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
 
 # 打印SQL
 logging:
@@ -41,10 +49,21 @@ logging:
 mybatis:
   # XML扫描路径
   mapper-locations: classpath:mapper/**/*.xml
+  #
+  type-aliases-package: com.example.demo.bean
   # 通用Mapper的方法会自动转换驼峰，但手写的SQL需要开启才能转换
   configuration:
     map-underscore-to-camel-case: on
-      # 在控制台中打印sql
+    # 在控制台中打印sql
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+mapper:
+  identity: MYSQL
+  mappers: com.example.demo.util.MyMapper
+  not-empty: false
 
+pagehelper:
+  helperDialect: mysql
+  params: count=countSql
+  reasonable: true
+  supportMethodsArguments: true

@@ -3,29 +3,22 @@ package com.example.demo.bean;
 import java.util.Date;
 import javax.persistence.*;
 
-public class User {
-    /**
-     * id
-     */
+public class Resource {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    /**
-     * 姓名
-     */
     private String name;
 
-    /**
-     * 年龄
-     */
-    private Integer age;
+    @Column(name = "res_url")
+    private String resUrl;
 
-    private String username;
+    private String type;
 
-    private String password;
+    @Column(name = "parent_id")
+    private Integer parentId;
 
-    private Integer enable;
+    private String sort;
 
     private Integer status;
 
@@ -36,99 +29,82 @@ public class User {
     private Date updateTime;
 
     /**
-     * 获取id
-     *
-     * @return id - id
+     * @return id
      */
     public Integer getId() {
         return id;
     }
 
     /**
-     * 设置id
-     *
-     * @param id id
+     * @param id
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * 获取姓名
-     *
-     * @return name - 姓名
+     * @return name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * 设置姓名
-     *
-     * @param name 姓名
+     * @param name
      */
     public void setName(String name) {
         this.name = name;
     }
 
+
+
     /**
-     * 获取年龄
-     *
-     * @return age - 年龄
+     * @param resUrl
      */
-    public Integer getAge() {
-        return age;
+    public void setResUrl(String resUrl) {
+        this.resUrl = resUrl;
     }
 
     /**
-     * 设置年龄
-     *
-     * @param age 年龄
+     * @return type
      */
-    public void setAge(Integer age) {
-        this.age = age;
+    public String getType() {
+        return type;
     }
 
     /**
-     * @return username
+     * @param type
      */
-    public String getUsername() {
-        return username;
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**
-     * @param username
+     * @return parent_id
      */
-    public void setUsername(String username) {
-        this.username = username;
+    public Integer getParentId() {
+        return parentId;
     }
 
     /**
-     * @return password
+     * @param parentId
      */
-    public String getPassword() {
-        return password;
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
     }
 
     /**
-     * @param password
+     * @return sort
      */
-    public void setPassword(String password) {
-        this.password = password;
+    public String getSort() {
+        return sort;
     }
 
     /**
-     * @return enable
+     * @param sort
      */
-    public Integer getEnable() {
-        return enable;
-    }
-
-    /**
-     * @param enable
-     */
-    public void setEnable(Integer enable) {
-        this.enable = enable;
+    public void setSort(String sort) {
+        this.sort = sort;
     }
 
     /**
@@ -171,5 +147,12 @@ public class User {
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    /**
+     * @return res_url
+     */
+    public String getResUrl() {
+        return resUrl;
     }
 }

@@ -73,4 +73,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserDomain> impleme
     public User getUserByNameAndAge(String name, int age) {
         return userDao.getUserByNameAndAge(name, age);
     }
+
+    @Override
+    public User selectByUsername(String username) {
+        return null;
+    }
 }

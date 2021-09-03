@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.AlbumMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.bean.Album">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="score" jdbcType="VARCHAR" property="score" />
+    <result column="detail" jdbcType="VARCHAR" property="detail" />
+    <result column="broadcast" jdbcType="VARCHAR" property="broadcast" />
+    <result column="cover" jdbcType="VARCHAR" property="cover" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createdate" />
+    <result column="chapter" jdbcType="VARCHAR" property="chapter" />
+  </resultMap>
+</mapper>

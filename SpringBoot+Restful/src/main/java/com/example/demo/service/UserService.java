@@ -59,4 +59,6 @@ public interface UserService extends IService<UserDomain> {
      * @return
      */
     User getUserByNameAndAge(String name, int age);
+
+    User selectByUsername(String username);
 }
