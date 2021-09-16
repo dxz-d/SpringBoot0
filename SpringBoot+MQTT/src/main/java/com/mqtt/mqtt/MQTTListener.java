@@ -22,8 +22,9 @@ public class MQTTListener implements ApplicationListener<ContextRefreshedEvent> 
     private Callback callback;
 
     @Autowired
-    public MQTTListener(MQTTConnect server) {
+    public MQTTListener(MQTTConnect server, Callback callback) {
         this.server = server;
+        this.callback = callback;
     }
 
     @Override
