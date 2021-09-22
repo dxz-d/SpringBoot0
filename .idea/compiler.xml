@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBoot" />
+        <module name="SpringBoot+MQTT" />
         <module name="demo (2) (com.example)" />
       </profile>
     </annotationProcessing>
@@ -15,12 +16,14 @@
       <module name="demo (2) (com.example)" target="1.8" />
       <module name="SpringBoot" target="1.8" />
       <module name="SpringBoot+File" target="1.8" />
+      <module name="SpringBoot+MQTT" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringBoot" options="-parameters" />
       <module name="SpringBoot+File" options="-parameters" />
+      <module name="SpringBoot+MQTT" options="-parameters" />
       <module name="demo (1) (com.nginx)" options="-parameters" />
       <module name="demo (2) (com.example)" options="-parameters" />
     </option>

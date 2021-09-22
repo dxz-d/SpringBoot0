@@ -1,11 +1,18 @@
 package com.example.demo;
 
+import com.example.demo.bean.User;
+import com.example.demo.bean.UserDomain;
+import com.example.demo.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.thymeleaf.standard.expression.Each;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootTest
 class DemoApplicationTests {
@@ -32,6 +39,33 @@ class DemoApplicationTests {
         System.out.println("当前日期：" +endDate+ ",30天之后的日期:" +startDate+ ",一年之后的日期：" +aYearAgo);
     }
 
+    @Autowired
+    private UserMapper userMapper;
+
+    @Test
+    void selectMp() {
+        List<UserDomain> userDomains = userMapper.selectList(null);
+        userDomains.forEach(System.out::println);
+    }
+
+    @Test
+    void insert() {
+        UserDomain userDomain = new UserDomain();
+
+        userDomain.setUserId(99);
+        userDomain.setNow(new Date());
+        userDomain.setSex(1);
+        userDomain.setUserName("哎");
+        userMapper.insert(userDomain);
+
+        System.out.println("userDomain:" +userDomain);
+    }
+
+    @Test
+    @Scheduled(cron = "0/30 * * * * *")
+    public void work(){
+        System.out.print("执行一次\n");
+    }
 
 
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/SpringBoot+MQTT" />
     <file type="web" url="file://$PROJECT_DIR$/SpringBoot+Nginx+Tomcat" />
   </component>
   <component name="JavaScriptSettings">
@@ -11,6 +12,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot+Restful/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot+MQTT/pom.xml" />
       </list>
     </option>
   </component>
